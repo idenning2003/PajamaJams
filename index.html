@@ -5,19 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PajamaJams - Truth Or Dare</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Author: Isaac Denning and Ethan Gruening
-    Isaac ISU Netid : idenning@iastate.edu
-    Ethan ISU Netid : ethgru@iastate.edu
-    Date : March 4th, 2023 -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Author: Isaac Denning and Ethan Gruening Isaac ISU Netid : idenning@iastate.edu Ethan ISU Netid : ethgru@iastate.edu Date : March 4th, 2023 -->
 </head>
 <body>
-    <div id="header">
-        <h1>PajamaJams</h1>
+    <div id="aboutDropdown" style="display: none;">
+        <p>About ABout About.</p>
+        <p>More explanation</p>
+        <p>Explanation continued</p>
     </div>
-    
-    <a href="/games/truth-or-dare.html" class="button">Truth or Dare</a>
+
+    <div id="aboutButton" onclick="toggleAbout()" class="button">About</div>
+
+    <header>
+        <h1>PajamaJams</h1>
+    </header>
+
+    <main>
+        <div class="image-container">
+            <a href="truth-or-dare.html"><img src="images/truth-or-dare.png" alt="Truth or Dare Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="paranoia.html"><img src="images/paranoia.png" alt="Paranoia Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="would-you-rather.html"><img src="images/would-you-rather.png" alt="Would You Rather Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="never-have-i-ever.html"><img src="images/never-have-i-ever.png" alt="Never Have I Ever Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="kiss-marry-kill.html"><img src="images/kiss-marry-kill.png" alt="Kiss Marry Kill Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="pictionary.html"><img src="images/pictionary.png" alt="Pictionary Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="charades.html"><img src="images/gameimage.jpg" alt="Charades Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="smash-or-pass.html"><img src="images/gameimage.jpg" alt="Smash Or Pass Image"></a>
+        </div>
+        <div class="image-container">
+            <a href="storytime.html"><img src="images/storytime.png" alt="Storytime Image"></a>
+        </div>
+    </main>
+
+    <script>
+        function toggleAbout() {
+            var aboutDropdown = document.getElementById("aboutDropdown");
+            aboutDropdown.style.display = (aboutDropdown.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
 </body>
 </html>
