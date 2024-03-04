@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/truth-or-dare.css">
+
     <!-- Author: Isaac Denning and Ethan Gruening
     Isaac ISU Netid : idenning@iastate.edu
     Ethan ISU Netid : ethgru@iastate.edu
@@ -15,12 +17,25 @@
 </head>
 <body>
     <div id="header">
-        <a href="/index.html" class="button">Return Home</a>
+        <a href="/index.html" class="unselectable button">Return Home</a>
         <h1>Truth or Dare</h1>
-        <a href="/abouts/truth-or-dare.html" class="button">About</a>
+        <a href="/abouts/truth-or-dare.html" class="unselectable button">About</a>
     </div>
     <div id="game">
-        <p>TODO: Truth or Dare Goes here</p>
+        <div id="options">
+            <div id="truth" class="option">
+                <h1>Truth</h1>
+                <p id="truthButton" class="unselectable button">Get Prompt</p>
+            </div>
+            <div id="spacer"></div>
+            <div id="dare" class="option">
+                <h1>Dare</h1>
+                <p id="dareButton" class="unselectable button">Get Prompt</p>
+            </div>
+        </div>
+        <div id="result">
+            <p>Choose on of the two options above...</p>
+        </div>
     </div>
 
     <script src="/js/truth-or-dare.js"></script>
