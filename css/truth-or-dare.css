@@ -25,10 +25,9 @@
     margin-left: 25%;
     border: 2px solid #666666;
     border-radius: 20px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100px;
+    text-align: center;
+    font-size: xx-large;
 }
 
 #spacer {
