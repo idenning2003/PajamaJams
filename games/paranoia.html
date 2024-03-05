@@ -49,6 +49,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
@@ -71,64 +72,16 @@
         </div>
 
         <button onclick="changeQuestionText()" style="width: 60%; height: 50px; background-color: #888;">New Prompt</button>
-
-        <script>
-            function toggleQuestionVisibility() {
-                const questionText = document.getElementById('questionText');
-                const hideButton = document.getElementById('hideButton');
-                const currentVisibility = questionText.style.visibility;
-
-                if (currentVisibility === 'hidden' || currentVisibility === '') {
-                questionText.style.visibility = 'visible';
-                hideButton.textContent = 'Hide Question'
-
-                } else {
-                questionText.style.visibility = 'hidden';
-                hideButton.textContent = 'Show Question'
-                }
-            }
-
-            function flipCoin() {
-                const coinImage = document.getElementById('coinImage');
-                const randomValue = Math.floor(Math.random() * 10001);
-                if (randomValue % 2 == 1) {
-                    coinImage.src = '../images/heads.png';
-                } else {
-                    coinImage.src = '../images/tails.png';
-                }
-
-                coinImage.style.visibility = 'visible';
-            }
-
-            function changeQuestionText() {
-
-                const questionText = document.getElementById('questionText');
-
-                fetch("../json/paranoia.json")
-                .then(response => response.json())
-                .then(json => setResult(json, questionText));
-
-                function setResult(json, questionText) {
-                    questionText.textContent = json.questions[Math.floor(Math.random()*json.questions.length)];
-                }
-
-                const hideButton = document.getElementById('hideButton');
-                const currentVisibility = questionText.style.visibility;
-
-                questionText.style.visibility = 'visible';
-                hideButton.textContent = 'Hide Question'
-            }
-            
-        </script>
     </main>
+
     <div id="helpDropdown"></div>
+
     <div id="aboutDropdown">
         <p>How to Play: Paranoia</p>
         <p>Paranoia is a classic party game that challenges one participant to answer a flattering, accusational, or down right troubling question about the other participants.</p>
         <p>The one answering participant will be secretly shown a question and will outload answer, which will be one of the other participants.</p>
         <p>A coin will then be flipped to determine if the question will be revealed or kept secret. Heads reveals, tails conceals.</p>
         <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
-
     </div>
 
     <script src="../js/paranoia.js"></script>
