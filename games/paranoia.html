@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PajamaJams - Paranoia</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Author: Isaac Denning and Ethan Gruening
+    Isaac ISU Netid : idenning@iastate.edu
+    Ethan ISU Netid : ethgru@iastate.edu
+    Date : March 4th, 2023 -->
+    <style>
+
+        .box {
+            width: 400px;
+            height: 400px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #questionBox {
+            background-color: #aaf0d1; /* Pastel Green */
+            width: 40%
+        }
+
+        #coinBox {
+            background-color: #add8e6; /* Pastel Blue */
+        }
+
+        #coinImage {
+            display: flex;
+            visibility: hidden;
+            height: 300px;
+            z-index: 0;
+        }
+
+        #newQuestionButton{
+            width: 60%; 
+            height: 50px;
+            background-color: #888;
+        }
+        .boxButton{
+            height: 40px;
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
+        <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
+        <p id="helpButton" onclick="toggleHelp()" class="unselectable button">Help</p>
+    </header>
+    <main>
+
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Paranoia</h1>
+        <div id="questionBox" class="box">
+            <h2>Question</h2>
+            <p id="questionText" style="font-size: 20pt; text-align: center;"> </p>
+            <button id="hideButton" class="boxButton" onclick="toggleQuestionVisibility()">Hide Question</button>
+        </div>
+
+        <div id="coinBox" class="box">
+            <h2>Coin Flip</h2>
+            <img id="coinImage" src="coin.png" alt="Coin Image">
+            <button class="boxButton" onclick="flipCoin()">Flip Coin</button>
+        </div>
+
+        <button onclick="changeQuestionText()" style="width: 60%; height: 50px; background-color: #888;">New Prompt</button>
+
+        <script>
+            function toggleQuestionVisibility() {
+                const questionText = document.getElementById('questionText');
+                const hideButton = document.getElementById('hideButton');
+                const currentVisibility = questionText.style.visibility;
+
+                if (currentVisibility === 'hidden' || currentVisibility === '') {
+                questionText.style.visibility = 'visible';
+                hideButton.textContent = 'Hide Question'
+
+                } else {
+                questionText.style.visibility = 'hidden';
+                hideButton.textContent = 'Show Question'
+                }
+            }
+
+            function flipCoin() {
+                const coinImage = document.getElementById('coinImage');
+                const randomValue = Math.floor(Math.random() * 10001);
+                if (randomValue % 2 == 1) {
+                    coinImage.src = '../images/heads.png';
+                } else {
+                    coinImage.src = '../images/tails.png';
+                }
+
+                coinImage.style.visibility = 'visible';
+            }
+
+            function changeQuestionText() {
+
+                const questionText = document.getElementById('questionText');
+
+                fetch("../json/paranoia.json")
+                .then(response => response.json())
+                .then(json => setResult(json, questionText));
+
+                function setResult(json, questionText) {
+                    questionText.textContent = json.questions[Math.floor(Math.random()*json.questions.length)];
+                }
+
+                const hideButton = document.getElementById('hideButton');
+                const currentVisibility = questionText.style.visibility;
+
+                questionText.style.visibility = 'visible';
+                hideButton.textContent = 'Hide Question'
+            }
+            
+        </script>
+    </main>
+    <div id="helpDropdown"></div>
+    <div id="aboutDropdown">
+        <p>How to Play: Paranoia</p>
+        <p>Paranoia is a classic party game that challenges one participant to answer a flattering, accusational, or down right troubling question about the other participants.</p>
+        <p>The one answering participant will be secretly shown a question and will outload answer, which will be one of the other participants.</p>
+        <p>A coin will then be flipped to determine if the question will be revealed or kept secret. Heads reveals, tails conceals.</p>
+        <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
+
+    </div>
+
+    <script src="../js/paranoia.js"></script>
+    <script>
+        function toggleAbout() {
+            var aboutDropdown = document.getElementById("aboutDropdown");
+            aboutDropdown.style.display = (aboutDropdown.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
