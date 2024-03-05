@@ -79,7 +79,41 @@ main {
     border-radius: 8px;
     cursor: pointer;
 }
+#helpDropdown {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 700px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 8px;
+}
+#helpButton.button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5;
+    transition: background-color 0.3s, color 0.3s;
+}
 
+#helpButton.button:hover {
+    background-color: #555;
+}
+
+#helpButton.button:active {
+    background-color: #222;
+}
 #aboutDropdown {
     display: none;
     position: absolute;

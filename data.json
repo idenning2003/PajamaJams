@@ -1,0 +1,73 @@
+{
+    "imageButtons": [
+        {
+            "image_filepath": "images/truth-or-dare.png",
+            "html_filepath": "games/truth-or-dare.html",
+            "game_name": "TruthOrDareImage"
+        },
+        {
+            "image_filepath": "images/paranoia.png",
+            "html_filepath": "games/paranoia.html",
+            "game_name": "ParanoiaPicture"
+        },
+        {
+            "image_filepath": "images/would-you-rather.png",
+            "html_filepath": "games/would-you-rather.html",
+            "game_name": "WouldYouRatherImage"
+        },
+        {
+            "image_filepath": "images/never-have-i-ever.png",
+            "html_filepath": "games/never-have-i-ever.html",
+            "game_name": "NeverHaveIEverImage"
+        },
+        {
+            "image_filepath": "images/kiss-marry-kill.png",
+            "html_filepath": "games/kiss-marry-kill.html",
+            "game_name": "KissMarryKillImage"
+        },
+        {
+            "image_filepath": "images/pictionary.png",
+            "html_filepath": "games/pictionary.html",
+            "game_name": "PictionaryImage"
+        },
+        {
+            "image_filepath": "images/charades.png",
+            "html_filepath": "games/charades.html",
+            "game_name": "CharadesImage"
+        },
+        {
+            "image_filepath": "images/smash-or-pass.png",
+            "html_filepath": "games/smash-or-pass.html",
+            "game_name": "SmashOrPassImage"
+        },
+        {
+            "image_filepath": "images/storytime.png",
+            "html_filepath": "games/storytime.html",
+            "game_name": "StorytimeImage"
+        }
+    ],
+    "helpContents": [
+        {
+            "image_filepath": "https://www.kalmbachfeeds.com/wp-content/uploads/2022/07/two-white-ducks-in-grass.jpg",
+            "image_alt": "Ducky1",
+            "header": "Ducky1",
+            "paragraph1": "This is the first description",
+            "paragraph2": "This is the second description"
+        },
+        {
+            "image_filepath": "https://i.natgeofe.com/k/327b01e8-be2e-4694-9ae9-ae7837bd8aea/mallard-male-swimming_square.jpg",
+            "image_alt": "Ducky2",
+            "header": "Ducky2",
+            "paragraph1": "This is the first description",
+            "paragraph2": "This is the second description"
+        },
+        {
+            "image_filepath": "https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg",
+            "image_alt": "Ducky3",
+            "header": "Ducky3",
+            "paragraph1": "This is the first description",
+            "paragraph2": "This is the second description"
+        }
+    ]
+
+}
