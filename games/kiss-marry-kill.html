@@ -22,29 +22,24 @@
             align-items: center;
         }
 
-        #questionBox {
-            background-color: #aaf0d1; /* Pastel Green */
-            width: 40%
+        #questionBox1 {
+            background-color: #9a47d1;
+            width: 30%;
         }
 
-        #coinBox {
-            background-color: #add8e6; /* Pastel Blue */
+        #questionBox2 {
+            background-color: #28b86e;
+            width: 30%;
         }
 
-        #coinImage {
-            display: flex;
-            visibility: hidden;
-            height: 300px;
-            z-index: 0;
+        #questionBox3{
+            background-color: #2896b8;
+            width: 30%;
         }
 
         #newQuestionButton{
             width: 60%; 
             height: 50px;
-            background-color: #888;
-        }
-        .boxButton{
-            height: 40px;
             background-color: #888;
         }
     </style>
@@ -58,17 +53,16 @@
     </header>
     <main>
 
-        <h1 class="unselectable" style="width: 100%; text-align: center;">Paranoia</h1>
-        <div id="questionBox" class="box">
-            <h2>Question</h2>
-            <p id="questionText" style="font-size: 20pt; text-align: center;"> </p>
-            <button id="hideButton" class="boxButton" onclick="toggleQuestionVisibility()">Hide Question</button>
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Kiss Marry Kill</h1>
+        <div id="questionBox1" class="box">
+            <p id="questionText1" style="font-size: 35pt; text-align: center;"> </p>
         </div>
 
-        <div id="coinBox" class="box">
-            <h2>Coin Flip</h2>
-            <img id="coinImage" src="coin.png" alt="Coin Image">
-            <button class="boxButton" onclick="flipCoin()">Flip Coin</button>
+        <div id="questionBox2" class="box">
+            <p id="questionText2" style="font-size: 35pt; text-align: center;"> </p>
+        </div>
+        <div id="questionBox3" class="box">
+            <p id="questionText3" style="font-size: 35pt; text-align: center;"> </p>
         </div>
 
         <button onclick="changeQuestionText()" style="width: 60%; height: 50px; background-color: #888;">New Prompt</button>
@@ -77,13 +71,13 @@
     <div id="helpDropdown"></div>
 
     <div id="aboutDropdown">
-        <p>How to Play: Paranoia</p>
-        <p>Paranoia is a classic party game that challenges one participant to answer a flattering, accusational, or down right troubling question about the other participants.</p>
-        <p>The one answering participant will be secretly shown a question and will outload answer, which will be one of the other participants.</p>
-        <p>A coin will then be flipped to determine if the question will be revealed or kept secret. Heads reveals, tails conceals.</p>
+        <p>How to Play: Kiss Marry Kill</p>
+        <p>Kiss Marry Kill is a classic party game that challenges a participant to decide their future between 3 people.</p>
+        <p>The participant will be shown three options of celebrities, people they know, or characters.</p>
+        <p>It is the participant's challenge to decide which of the options they would want to kiss, which of the other two they'd marry, killing the final option.</p>
         <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
     </div>
 
-    <script src="../js/paranoia.js"></script>
+    <script src="../js/kiss-marry-kill.js"></script>
 </body>
 </html>

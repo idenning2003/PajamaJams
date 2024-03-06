@@ -22,29 +22,19 @@
             align-items: center;
         }
 
-        #questionBox {
-            background-color: #aaf0d1; /* Pastel Green */
-            width: 40%
+        #questionBox1 {
+            background-color: #d18547;
+            width: 40%;
         }
 
-        #coinBox {
-            background-color: #add8e6; /* Pastel Blue */
-        }
-
-        #coinImage {
-            display: flex;
-            visibility: hidden;
-            height: 300px;
-            z-index: 0;
+        #questionBox2 {
+            background-color: #b82828;
+            width: 40%;
         }
 
         #newQuestionButton{
             width: 60%; 
             height: 50px;
-            background-color: #888;
-        }
-        .boxButton{
-            height: 40px;
             background-color: #888;
         }
     </style>
@@ -58,17 +48,13 @@
     </header>
     <main>
 
-        <h1 class="unselectable" style="width: 100%; text-align: center;">Paranoia</h1>
-        <div id="questionBox" class="box">
-            <h2>Question</h2>
-            <p id="questionText" style="font-size: 20pt; text-align: center;"> </p>
-            <button id="hideButton" class="boxButton" onclick="toggleQuestionVisibility()">Hide Question</button>
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Would You Rather...?</h1>
+        <div id="questionBox1" class="box">
+            <p id="questionText1" style="font-size: 35pt; text-align: center;"> </p>
         </div>
 
-        <div id="coinBox" class="box">
-            <h2>Coin Flip</h2>
-            <img id="coinImage" src="coin.png" alt="Coin Image">
-            <button class="boxButton" onclick="flipCoin()">Flip Coin</button>
+        <div id="questionBox2" class="box">
+            <p id="questionText2" style="font-size: 35pt; text-align: center;"> </p>
         </div>
 
         <button onclick="changeQuestionText()" style="width: 60%; height: 50px; background-color: #888;">New Prompt</button>
@@ -77,13 +63,13 @@
     <div id="helpDropdown"></div>
 
     <div id="aboutDropdown">
-        <p>How to Play: Paranoia</p>
-        <p>Paranoia is a classic party game that challenges one participant to answer a flattering, accusational, or down right troubling question about the other participants.</p>
-        <p>The one answering participant will be secretly shown a question and will outload answer, which will be one of the other participants.</p>
-        <p>A coin will then be flipped to determine if the question will be revealed or kept secret. Heads reveals, tails conceals.</p>
+        <p>How to Play: Would You Rather</p>
+        <p>Would You Rather is a classic party game that challenges a participant to decide their hypothetical fate.</p>
+        <p>The participant will be shown two options which they will have to choose between.</p>
+        <p>It is the participant's challenge to decide which of the options they would rather choose and justify it to the group.</p>
         <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
     </div>
 
-    <script src="../js/paranoia.js"></script>
+    <script src="../js/would-you-rather.js"></script>
 </body>
 </html>
