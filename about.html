@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PajamaJams - About</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-        <!-- Author: Isaac Denning and Ethan Gruening 
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Author: Isaac Denning and Ethan Gruening 
         Isaac ISU Netid : idenning@iastate.edu 
         Ethan ISU Netid : ethgru@iastate.edu 
         Date : March 6th, 2023 -->
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
         #aboutInfo {
-            display: block;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #titleBox{
+            background-color: #92d6ea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        #nameBox {
+            background-color: #aef2d3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #titleBox {
+            text-align: center;
+        }
+
+        #pageTitle {
+            margin-bottom: 10px;
+        }
+
+        #sectionTitle {
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        #contentText {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        #boldText {
+            font-weight: bold;
+        }
+
+        #emailLink {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        #emailLink:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1 class="unselectable"><a href="index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
@@ -26,29 +83,38 @@
     </header>
 
     <main id="aboutInfo">
-        <h1>PajamaJams - About</h1>
-        <p>
-            <b>Course:</b> SE/ComS319 Construction of User Interfaces, Spring 2024 <br>
-            <b>Date:</b> 3/06/2024
-        </p>
-        <h2>Isaac Denning</h2>
-        <p>
-            Outside of school I have developed two full-stack applications with Angular frontends. <br>
-            However, neither of these applications revolved around game development like this one. <br>
-            Although I do believe many of my more general web design skills will transfer over to this <br>
-            project development of this project. <br><br>
-            <b>Email:</b> idenning@iastate.edu
-        </p>
-        <h2>Ethan Gruening</h2>
-        <p>
-            As a sophomore studying Software Engineering, I have current experience in the development <br>
-            of a Python GUI through a research group. Although this project was not in the text stack <br>
-            of COMS 319, the experimental process of identifying user needs, creating a technical design, <br>
-            writing, testing, and revising code will help me comfortably navigate the design process <br>
-            of PajamaJams. I also have additional experience with MySQL and back/front-end linkage, <br>
-            which will help in the Final Project implementation. <br><br>
-            <b>Email:</b> ethgru@iastate.edu
-        </p>
+        <div id="titleBox">
+            <h1 id="pageTitle">PajamaJams - About</h1>
+            <p>
+                <span id="boldText">Course:</span> SE/ComS319 Construction of User Interfaces, Spring 2024 <br>
+                <span id="boldText">Date:</span> 3/06/2024
+            </p>
+        </div>
+
+        <div id="mainBox">
+            <div id="nameBox">
+                <h2 id="sectionTitle"><u>Isaac Denning</u></h2>
+                <p id="contentText">
+                    Outside of school I have developed two full-stack applications with Angular frontends. <br>
+                    However, neither of these applications revolved around game development like this one. <br>
+                    Although I do believe many of my more general web design skills will transfer over to this <br>
+                    project development of this project. <br><br>
+                    <span id="boldText">Email:</span> <a id="emailLink" href="mailto:idenning@iastate.edu">idenning@iastate.edu</a>
+                </p>
+            </div>
+            <div id="nameBox">
+                <h2 id="sectionTitle"><u>Ethan Gruening</u></h2>
+                <p id="contentText">
+                    As a sophomore studying Software Engineering, I have current experience in the development <br>
+                    of a Python GUI through a research group. Although this project was not in the text stack <br>
+                    of COMS 319, the experimental process of identifying user needs, creating a technical design, <br>
+                    writing, testing, and revising code will help me comfortably navigate the design process <br>
+                    of PajamaJams. I also have additional experience with MySQL and back/front-end linkage, <br>
+                    which will help in the Final Project implementation. <br><br>
+                    <span id="boldText">Email:</span> <a id="emailLink" href="mailto:ethgru@iastate.edu">ethgru@iastate.edu</a>
+                </p>
+            </div>
+        </div>
     </main>
 
     <div id="hamburgerDropdown">
@@ -65,4 +131,5 @@
     <script src="js/index.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
