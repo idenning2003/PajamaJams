@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PajamaJams - Kiss Marry Kill</title>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>PajamaJams - StoryTime</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Author: Isaac Denning and Ethan Gruening
     Isaac ISU Netid : idenning@iastate.edu
     Ethan ISU Netid : ethgru@iastate.edu
-    Date : March 4th, 2023 -->
+    Date : March 6th, 2023 -->
+
     <style>
 
         .box {
@@ -25,21 +26,11 @@
             border-radius: 20px;
         }
 
-        #questionBox1 {
-            background-color: #9a47d1;
-            width: 30%;
+        #promptBox {
+            background-color: #fcfc7c;
+            width: 70%;
         }
-
-        #questionBox2 {
-            background-color: #28b86e;
-            width: 30%;
-        }
-
-        #questionBox3{
-            background-color: #2896b8;
-            width: 30%;
-        }
-
+        
         #promptButton {
             display: flex;
             justify-content: center;
@@ -55,41 +46,33 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
         <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
         <p id="hamburgerButton" onclick="toggleHamburger()" class="unselectable button">&#8801;</p>
     </header>
+
     <main>
 
-        <h1 class="unselectable" style="width: 100%; text-align: center;">Kiss Marry Kill</h1>
-        <div id="questionBox1" class="box">
-            <p id="questionText1" style="font-size: 35pt; text-align: center;"> </p>
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Storytime</h1>
+        <div id="promptBox" class="box">
+            <p id="promptText" style="font-size: 35pt; text-align: center;">Click on the New Prompt button...</p>
         </div>
-
-        <div id="questionBox2" class="box">
-            <p id="questionText2" style="font-size: 35pt; text-align: center;"> </p>
-        </div>
-        <div id="questionBox3" class="box">
-            <p id="questionText3" style="font-size: 35pt; text-align: center;"> </p>
-        </div>
-
-        <p id="promptButton" onclick="changeQuestionText()" class="unselectable button">New Prompt</button>
+        <p id="promptButton" class="unselectable button" onclick="changePromptText()">New Prompt</p>
     </main>
 
     <div id="hamburgerDropdown"></div>
 
     <div id="aboutDropdown">
-        <p>How to Play: Kiss Marry Kill</p>
-        <p>Kiss Marry Kill is a classic party game that challenges a participant to decide their future between 3 people.</p>
-        <p>The participant will be shown three options of celebrities, people they know, or characters.</p>
-        <p>It is the participant's challenge to decide which of the options they would want to kiss, which of the other two they'd marry, killing the final option.</p>
+        <p>How to Play: StoryTime</p>
+        <p>StoryTime is an engaging game that invites players to share personal anecdotes and tales based on given prompts.</p>
+        <p>Each player takes turns clicking the "New Prompt" button and sharing a story based on the given prompt, recounting personal experiences, adventures, mishaps, or humorous incidents.</p>
+        <p>The game continues with players taking turns sharing stories until everyone has had a chance to participate.</p>
         <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
     </div>
 
-    <script src="../js/kiss-marry-kill.js"></script>
+    <script src="/js/storytime.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

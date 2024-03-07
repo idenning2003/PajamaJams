@@ -7,33 +7,80 @@
     <title>PajamaJams - Truth or Dare</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
-
-    <link rel="stylesheet" href="/css/truth-or-dare.css">
-
     <!-- Author: Isaac Denning and Ethan Gruening
     Isaac ISU Netid : idenning@iastate.edu
     Ethan ISU Netid : ethgru@iastate.edu
     Date : March 4th, 2023 -->
+
+    <style>
+        
+        #options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+
+        #truth {
+            background-color: #B8D7FA;
+        }
+
+        #dare {
+            background-color: #ECC5D6;
+            margin-left: max(calc(40dvw - 60vh + 100px), 0px);
+        }
+
+        #result {
+            background-color: #f2f2f2;
+            width: 50%;
+            margin-right: 25%;
+            margin-left: 25%;
+            border: 2px solid #666666;
+            border-radius: 20px;
+            min-height: 100px;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        #truthButton {
+            transform: translateY(-50%);
+            margin-top: calc(50% - 160px);
+        }
+
+        #dareButton {
+            transform: translateY(-50%);
+            margin-top: calc(50% - 160px);
+        }
+
+        .option {
+            width: min(50dvw, calc(60vh - 100px));
+            height: min(50dvw, calc(60vh - 100px));
+            margin: 10px;
+            text-align: center;
+            border: 2px solid #666666;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Had to make return a paragraph rather than an anchor since the styling was different -->
-        <p id="returnButton" onclick="home()" class="unselectable button">Return Home</p>
-        <h1 class="unselectable">Truth or Dare</h1>
+        <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
         <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
+        <p id="hamburgerButton" onclick="toggleHamburger()" class="unselectable button">&#8801;</p>
     </header>
 
     <main>
+
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Truth or Dare</h1>
         <div id="game">
             <div id="options">
                 <div id="truth" class="option">
                     <h1 class="unselectable">Truth</h1>
-                    <p id="truthButton" class="unselectable button">Get Prompt</p>
+                    <p id="truthButton" onclick="loadResult('truths')" class="unselectable button">Get Prompt</p>
                 </div>
-                <div id="spacer"></div>
                 <div id="dare" class="option">
                     <h1 class="unselectable">Dare</h1>
-                    <p id="dareButton" class="unselectable button">Get Prompt</p>
+                    <p id="dareButton" onclick="loadResult('dares')" class="unselectable button">Get Prompt</p>
                 </div>
             </div>
             <div id="result">
@@ -42,24 +89,21 @@
         </div>
     </main>
 
+    <div id="hamburgerDropdown"></div>
+
     <div id="aboutDropdown">
         <p>How to Play: Truth or Dare</p>
-        <p>Truth or Dare is a classic party game that invites participants to engage in a series of revealing questions and daring challenges.</p>
-        <p>To play, gather a group of friends and sit together in a circle. Decide who will go first, either by volunteering or by random selection. The first player then chooses whether they want to answer a truth question or perform a dare.</p>
-        <p>If they choose truth, they must truthfully answer the question posed by the prompt.</p>
-        <p>If they choose dare, they must complete a challenge assigned by the prompt.</p>
-        <p>After completing their turn, the next player takes their turn, and the game continues in this manner. The game often leads to laughter, surprises, and deeper connections among participants as they share personal insights and embark on adventurous challenges together.</p>
+        <p>Truth or Dare is a popular party game that offers players the choice between answering a question truthfully or completing a dare.</p>
+        <p>Randomly select the first player to begin, they must either select to get a prompt from "Truth" or from "Dare".</p>
+        <p>If the chosen player selects "Truth," they must truthfully answer a question posed by the player who asked.</p>
+        <p>If the chosen player selects "Dare," they must complete a challenge or task given by the player who asked.</p>
+        <p>After completing their turn, the chosen player then selects next person to play.</p>
+        <p>The game continues with players taking turns asking and answering truthfully or completing dares until everyone has had a chance to participate.</p>
+        <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
+        
     </div>
 
     <script src="/js/truth-or-dare.js"></script>
-    <script>
-        function toggleAbout() {
-            var aboutDropdown = document.getElementById("aboutDropdown");
-            aboutDropdown.style.display = (aboutDropdown.style.display === "block") ? "none" : "block";
-        }
-        function home() {
-            window.location.href = "/index.html";
-        }
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

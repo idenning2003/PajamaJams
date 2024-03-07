@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PajamaJams - Paranoia</title>
+    <title>PajamaJams - Would You Rather</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
     <!-- Author: Isaac Denning and Ethan Gruening
@@ -18,8 +18,11 @@
             height: 400px;
             margin: 10px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            text-align: center;
+            border: 2px solid #666666;
+            border-radius: 20px;
         }
 
         #questionBox1 {
@@ -32,10 +35,18 @@
             width: 40%;
         }
 
-        #newQuestionButton{
-            width: 60%; 
-            height: 50px;
-            background-color: #888;
+        #promptButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 33%;
+            margin-right: 33%;
+            margin-left: 33%;
+            border: 2px solid #666666;
+            border-radius: 20px;
+            min-height: 80px;
+            font-size: xx-large;
         }
     </style>
 </head>
@@ -44,7 +55,7 @@
     <header>
         <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
         <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
-        <p id="helpButton" onclick="toggleHelp()" class="unselectable button">Help</p>
+        <p id="hamburgerButton" onclick="toggleHamburger()" class="unselectable button">&#8801;</p>
     </header>
     <main>
 
@@ -57,10 +68,10 @@
             <p id="questionText2" style="font-size: 35pt; text-align: center;"> </p>
         </div>
 
-        <button onclick="changeQuestionText()" style="width: 60%; height: 50px; background-color: #888;">New Prompt</button>
+        <p id="promptButton" onclick="changeQuestionText()" class="unselectable button">New Prompt</button>
     </main>
 
-    <div id="helpDropdown"></div>
+    <div id="hamburgerDropdown"></div>
 
     <div id="aboutDropdown">
         <p>How to Play: Would You Rather</p>
@@ -71,5 +82,6 @@
     </div>
 
     <script src="../js/would-you-rather.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

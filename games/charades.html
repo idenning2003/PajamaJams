@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PajamaJams - Charades</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Author: Isaac Denning and Ethan Gruening
+    Isaac ISU Netid : idenning@iastate.edu
+    Ethan ISU Netid : ethgru@iastate.edu
+    Date : March 6th, 2023 -->
+
+    <style>
+        
+        #promptBox {
+            width: min(50dvw, calc(60vh - 100px));
+            height: min(50dvw, calc(60vh - 100px));
+            background-color: #f3a6ff;
+            border: 2px solid #666666;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 35pt;
+        }
+
+        #promptButton {
+            transform: translateX(calc(min(50dvw, calc(60vh - 100px)) / 2 - 139.1625px));
+            font-size: 35pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
+        <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
+        <p id="hamburgerButton" onclick="toggleHamburger()" class="unselectable button">&#8801;</p>
+    </header>
+
+    <main>
+
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Charades</h1>
+        <div id="game">
+            <div id="promptBox">
+                <p id="promptText">Click Prompt Button...</p>
+            </div>
+            <p id="promptButton" class="unselectable button" onclick="changePromptText()">New Prompt</p>
+        </div>
+    </main>
+
+    <div id="hamburgerDropdown"></div>
+
+    <div id="aboutDropdown">
+        <p>How to Play: Charades</p>
+        <p>Charades is a classic guessing game that sparks laughter and creativity among players.</p>
+        <p>Begin by dividing players into teams. Taking turns, each team will choose one member of the team to click the "New Prompt" button and act out the word or phrase while their team tries to guess what it is.</p>
+        <p>The acting player cannot speak or make any sounds, and they have a limited time to convey the word or phrase. If the team correctly guesses the word or phrase within the time limit, they earn points. If not, the turn passes to the next team.</p>
+        <p>The game continues with teams alternating turns until a predetermined point goal is reached.</p>
+        <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
+
+    </div>
+
+    <script src="/js/charades.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

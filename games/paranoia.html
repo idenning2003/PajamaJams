@@ -20,6 +20,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 2px solid #666666;
+            border-radius: 20px;
         }
 
         #questionBox {
@@ -34,18 +36,22 @@
         #coinImage {
             display: flex;
             visibility: hidden;
-            height: 300px;
+            height: 250px;
             z-index: 0;
         }
 
-        #newQuestionButton{
-            width: 60%; 
-            height: 50px;
-            background-color: #888;
-        }
-        .boxButton{
-            height: 40px;
-            background-color: #888;
+        #promptButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 33%;
+            margin-right: 33%;
+            margin-left: 33%;
+            border: 2px solid #666666;
+            border-radius: 20px;
+            min-height: 80px;
+            font-size: xx-large;
         }
     </style>
 </head>
@@ -54,27 +60,27 @@
     <header>
         <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
         <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
-        <p id="helpButton" onclick="toggleHelp()" class="unselectable button">Help</p>
+        <p id="hamburgerButton" onclick="toggleHamburger()" class="unselectable button">&#8801;</p>
     </header>
     <main>
 
         <h1 class="unselectable" style="width: 100%; text-align: center;">Paranoia</h1>
         <div id="questionBox" class="box">
             <h2>Question</h2>
-            <p id="questionText" style="font-size: 20pt; text-align: center;"> </p>
-            <button id="hideButton" class="boxButton" onclick="toggleQuestionVisibility()">Hide Question</button>
+            <p id="questionText" style="font-size: 20pt; text-align: center;">Click on the New Prompt...</p>
+            <p id="hideButton" class="unselectable button" onclick="toggleQuestionVisibility()">Hide Question</p>
         </div>
 
         <div id="coinBox" class="box">
             <h2>Coin Flip</h2>
             <img id="coinImage" src="coin.png" alt="Coin Image">
-            <button class="boxButton" onclick="flipCoin()">Flip Coin</button>
+            <p class="unselectable button" onclick="flipCoin()">Flip Coin</button>
         </div>
 
-        <button onclick="changeQuestionText()" style="width: 60%; height: 50px; background-color: #888;">New Prompt</button>
+        <p id="promptButton" onclick="changeQuestionText()" class="unselectable button">New Prompt</p>
     </main>
 
-    <div id="helpDropdown"></div>
+    <div id="hamburgerDropdown"></div>
 
     <div id="aboutDropdown">
         <p>How to Play: Paranoia</p>
@@ -85,5 +91,6 @@
     </div>
 
     <script src="../js/paranoia.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

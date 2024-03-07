@@ -1,0 +1,49 @@
+{
+    "imageButtons": [
+        {
+            "image_filepath": "/images/truth-or-dare.png",
+            "html_filepath": "/games/truth-or-dare.html",
+            "game_name": "TruthOrDareImage"
+        },
+        {
+            "image_filepath": "/images/paranoia.png",
+            "html_filepath": "/games/paranoia.html",
+            "game_name": "ParanoiaPicture"
+        },
+        {
+            "image_filepath": "/images/would-you-rather.png",
+            "html_filepath": "/games/would-you-rather.html",
+            "game_name": "WouldYouRatherImage"
+        },
+        {
+            "image_filepath": "/images/pictionary.png",
+            "html_filepath": "/games/pictionary.html",
+            "game_name": "PictionaryImage"
+        },
+        {
+            "image_filepath": "/images/kiss-marry-kill.png",
+            "html_filepath": "/games/kiss-marry-kill.html",
+            "game_name": "KissMarryKillImage"
+        },
+        {
+            "image_filepath": "/images/charades.png",
+            "html_filepath": "/games/charades.html",
+            "game_name": "CharadesImage"
+        },
+        {
+            "image_filepath": "/images/never-have-i-ever.png",
+            "html_filepath": "/games/never-have-i-ever.html",
+            "game_name": "NeverHaveIEverImage"
+        },
+        {
+            "image_filepath": "/images/smash-or-pass.png",
+            "html_filepath": "/games/smash-or-pass.html",
+            "game_name": "SmashOrPassImage"
+        },
+        {
+            "image_filepath": "/images/storytime.png",
+            "html_filepath": "/games/storytime.html",
+            "game_name": "StorytimeImage"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    fetch('data.json')
+    fetch('../json/data.json')
         .then(response => response.json())
         .then(jsonData => {
 
@@ -48,12 +48,3 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error fetching JSON:', error));
 });
-
-function toggleAbout() {
-    var aboutDropdown = document.getElementById("aboutDropdown");
-    aboutDropdown.style.display = (aboutDropdown.style.display === "block") ? "none" : "block";
-}
-function toggleHelp() {
-    var helpDropdown = document.getElementById("helpDropdown");
-    helpDropdown.style.display = (helpDropdown.style.display === "block") ? "none" : "block";
-}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PajamaJams - Pictionary</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Author: Isaac Denning and Ethan Gruening
+    Isaac ISU Netid : idenning@iastate.edu
+    Ethan ISU Netid : ethgru@iastate.edu
+    Date : March 6th, 2023 -->
+
+    <style>
+        
+        #promptBox {
+            width: min(50dvw, calc(60vh - 100px));
+            height: min(50dvw, calc(60vh - 100px));
+            border: 2px solid #666666;
+            border-radius: 20px;
+            background-color: #7AC6FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 35pt;
+        }
+
+        #promptButton {
+            transform: translateX(calc(min(50dvw, calc(60vh - 100px)) / 2 - 139.1625px));
+            font-size: 35pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="unselectable"><a href="../index.html" style="text-decoration: none; color: inherit;">PajamaJams</a></h1>
+        <p id="aboutButton" onclick="toggleAbout()" class="unselectable button">About</p>
+        <p id="hamburgerButton" onclick="toggleHamburger()" class="unselectable button">&#8801;</p>
+    </header>
+
+    <main>
+
+        <h1 class="unselectable" style="width: 100%; text-align: center;">Pictionary</h1>
+        <div id="game">
+            <div id="promptBox">
+                <p id="promptText">Click Prompt Button...</p>
+            </div>
+            <p id="promptButton" class="unselectable button" onclick="changePromptText()">New Prompt</p>
+        </div>
+    </main>
+
+    <div id="hamburgerDropdown"></div>
+
+    <div id="aboutDropdown">
+        <p>How to Play: Pictionary</p>
+        <p>Pictionary is an entertaining drawing and guessing game perfect for groups of friends or family.</p>
+        <p>Start by dividing players into teams. Each team selects a drawer for the round.</p>
+        <p>On each turn, the designated drawer clicks the "New Prompt" button and attempts to draw whatever is promted in the box while their team tries to guess what it is.</p>
+        <p>The drawer cannot use words, letters, or gestures in their drawings.</p>
+        <p>If the team correctly guesses the word within a time limit, they earn points. If not, the opposing team gets a chance to steal.</p>
+        <p>The game continues with players taking turns drawing until a team reaches the designated point goal.</p>
+        <p>To learn more about our project, please visit our <a href="../about.html">Help Page</a></p>
+    </div>
+
+    <script src="/js/pictionary.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
