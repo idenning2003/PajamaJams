@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    fetch('../json/data.json')
+    fetch('/data.json')
         .then(response => response.json())
         .then(jsonData => {
 
             const gameImagesContainer = document.getElementById("game_images");
-            const helpDropdown = document.getElementById("helpDropdown");
 
             jsonData.imageButtons.forEach(imageObject => {
 

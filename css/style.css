@@ -151,28 +151,3 @@ main {
 #aboutButton.button:active {
     background-color: #222;
 }
-
-#returnButton.button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    line-height: 1.5;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#returnButton.button:hover {
-    background-color: #555;
-}
-
-#returnButton.button:active {
-    background-color: #222;
-}
