@@ -23,28 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 imageContainer.appendChild(imageLink);
                 gameImagesContainer.appendChild(imageContainer);
             });
-
-            jsonData.helpContents.forEach(contentObject => {
-                
-                const contentHeader = document.createElement("h3");
-                contentHeader.textContent = contentObject.header;
-
-                const contentImage = document.createElement("img");
-                contentImage.src = contentObject.image_filepath;
-                contentImage.alt = contentObject.image_alt;
-                contentImage.width = 500;
-
-                const contentParagraph1 = document.createElement("p");
-                contentParagraph1.textContent = contentObject.paragraph1;
-
-                const contentParagraph2 = document.createElement("p");
-                contentParagraph2.textContent = contentObject.paragraph2;
-
-                helpDropdown.appendChild(contentHeader);
-                helpDropdown.appendChild(contentImage);
-                helpDropdown.appendChild(contentParagraph1);
-                helpDropdown.appendChild(contentParagraph2);
-            });
         })
         .catch(error => console.error('Error fetching JSON:', error));
 });

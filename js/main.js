@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             jsonData.imageButtons.forEach(contentObject => {
 
                 const imageContainer = document.createElement("div");
+                imageContainer.className = "image-container";
 
                 const imageLink = document.createElement("a");
                 imageLink.href = contentObject.html_filepath;
@@ -32,5 +33,5 @@ function toggleAbout() {
 }
 function toggleHamburger() {
     var hamburgerDropdown = document.getElementById("hamburgerDropdown");
-    hamburgerDropdown.style.display = (hamburgerDropdown.style.display === "block") ? "none" : "block";
+    hamburgerDropdown.style.display = (hamburgerDropdown.style.display === "flex") ? "none" : "flex";
 }
