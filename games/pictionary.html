@@ -28,8 +28,17 @@
         }
 
         #promptButton {
-            transform: translateX(calc(min(50dvw, calc(60vh - 100px)) / 2 - 139.1625px));
-            font-size: 35pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 33%;
+            margin-right: 33%;
+            margin-left: 33%;
+            border: 2px solid #666666;
+            border-radius: 20px;
+            min-height: 80px;
+            font-size: xx-large;
         }
     </style>
 </head>
@@ -43,12 +52,10 @@
     <main>
 
         <h1 class="unselectable" style="width: 100%; text-align: center;">Pictionary</h1>
-        <div id="game">
-            <div id="promptBox">
-                <p id="promptText">Click Prompt Button...</p>
-            </div>
-            <p id="promptButton" class="unselectable button" onclick="changePromptText()">New Prompt</p>
+        <div id="promptBox" class="box">
+            <p id="promptText" style="font-size: 35pt; text-align: center;">Click on the New Prompt button...</p>
         </div>
+        <p id="promptButton" class="unselectable button" onclick="changePromptText()">New Prompt</p>
     </main>
 
     <div id="hamburgerDropdown"></div>
