@@ -3,7 +3,7 @@ function changeQuestionText() {
     const questionText1 = document.getElementById('questionText1');
     const questionText2 = document.getElementById('questionText2');
 
-    fetch("../json/would-you-rather.json")
+    fetch("/PajamaJams/json/would-you-rather.json")
     .then(response => response.json())
     .then(json => setResult(json, questionText1, questionText2));
 

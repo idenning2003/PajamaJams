@@ -2,7 +2,7 @@ function changeQuestionText() {
 
     const questionText = document.getElementById('questionText');
 
-    fetch("../json/never-have-i-ever.json")
+    fetch("/PajamaJams/json/never-have-i-ever.json")
     .then(response => response.json())
     .then(json => setResult(json, questionText));
 

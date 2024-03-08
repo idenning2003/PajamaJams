@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    fetch('./data.json')
+    fetch('/PajamaJams/data.json')
         .then(response => response.json())
         .then(jsonData => {
 

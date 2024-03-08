@@ -2,7 +2,7 @@ function changePromptText() {
 
     const promptText = document.getElementById('promptText');
 
-    fetch("../json/storytime.json")
+    fetch("/PajamaJams/json/storytime.json")
     .then(response => response.json())
     .then(json => setResult(json, promptText));
 

@@ -5,7 +5,7 @@ function changeQuestionText() {
     const questionText3 = document.getElementById('questionText3');
 
 
-    fetch("../json/smash-or-pass.json")
+    fetch("/PajamaJams/json/smash-or-pass.json")
     .then(response => response.json())
     .then(json => setResult(json, questionText1, questionText2, questionText3));
 

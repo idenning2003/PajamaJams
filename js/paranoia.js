@@ -15,14 +15,14 @@ function toggleQuestionVisibility() {
 
 function flipCoin() {
     const coinImage = document.getElementById('coinImage');
-    coinImage.src = '../images/flipping-coin.gif';
+    coinImage.src = '/PajamaJams/images/flipping-coin.gif';
     coinImage.style.visibility = 'visible';
     setTimeout(function() {
         const randomValue = Math.floor(Math.random() * 10001);
         if (randomValue % 2 == 1) {
-            coinImage.src = '../images/heads.png';
+            coinImage.src = '/PajamaJams/images/heads.png';
         } else {
-            coinImage.src = '../images/tails.png';
+            coinImage.src = '/PajamaJams/images/tails.png';
         }
     }, 1000);
 }
@@ -31,7 +31,7 @@ function changeQuestionText() {
 
     const questionText = document.getElementById('questionText');
 
-    fetch("../json/paranoia.json")
+    fetch("/PajamaJams/json/paranoia.json")
     .then(response => response.json())
     .then(json => setResult(json, questionText));
 
