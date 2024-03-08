@@ -1,64 +1,64 @@
 {
     "imageButtons": [
         {
-            "image_filepath": "./images/truth-or-dare.png",
-            "html_filepath": "./games/truth-or-dare.html",
+            "image_filepath": "/PajamaJams/images/truth-or-dare.png",
+            "html_filepath": "/PajamaJams/games/truth-or-dare.html",
             "game_name": "Truth or Dare",
             "game_description": "Pick between revealing truths or embarrasing dares.",
             "game_creator": "Isaac Denning"
         },
         {
-            "image_filepath": "./images/paranoia.png",
-            "html_filepath": "./games/paranoia.html",
+            "image_filepath": "/PajamaJams/images/paranoia.png",
+            "html_filepath": "/PajamaJams/games/paranoia.html",
             "game_name": "Paranoia",
             "game_description": "Risk exposing your opinions of your friends with 50/50 odds",
             "game_creator": "Ethan Gruening"
         },
         {
-            "image_filepath": "./images/would-you-rather.png",
-            "html_filepath": "./games/would-you-rather.html",
+            "image_filepath": "/PajamaJams/images/would-you-rather.png",
+            "html_filepath": "/PajamaJams/games/would-you-rather.html",
             "game_name": "Would You Rather",
             "game_description": "Make choices and discover where your hypothetical fates lie.",
             "game_creator": "Ethan Gruening"
         },
         {
-            "image_filepath": "./images/pictionary.png",
-            "html_filepath": "./games/pictionary.html",
+            "image_filepath": "/PajamaJams/images/pictionary.png",
+            "html_filepath": "/PajamaJams/games/pictionary.html",
             "game_name": "Pictionary",
             "game_description": "Show your friends just how bad of an artist you really are.",
             "game_creator": "Isaac Denning"
         },
         {
-            "image_filepath": "./images/kiss-marry-kill.png",
-            "html_filepath": "./games/kiss-marry-kill.html",
+            "image_filepath": "/PajamaJams/images/kiss-marry-kill.png",
+            "html_filepath": "/PajamaJams/games/kiss-marry-kill.html",
             "game_name": "Kiss Marry Kill",
             "game_description": "Reveal which celebrities you love and which ones you hate.",
             "game_creator": "Ethan Gruening"
         },
         {
-            "image_filepath": "./images/charades.png",
-            "html_filepath": "./games/charades.html",
+            "image_filepath": "/PajamaJams/images/charades.png",
+            "html_filepath": "/PajamaJams/games/charades.html",
             "game_name": "Charades",
             "game_description": "Embarase yourself with your terrible acting ability.",
             "game_creator": "Isaac Denning"
         },
         {
-            "image_filepath": "./images/never-have-i-ever.png",
-            "html_filepath": "./games/never-have-i-ever.html",
+            "image_filepath": "/PajamaJams/images/never-have-i-ever.png",
+            "html_filepath": "/PajamaJams/games/never-have-i-ever.html",
             "game_name": "Never Have I Ever",
             "game_description": "Prove to your friends just how much of a saint you aren't.",
             "game_creator": "Ethan Gruening"
         },
         {
-            "image_filepath": "./images/smash-or-pass.png",
-            "html_filepath": "./games/smash-or-pass.html",
+            "image_filepath": "/PajamaJams/images/smash-or-pass.png",
+            "html_filepath": "/PajamaJams/games/smash-or-pass.html",
             "game_name": "Smash or Pass",
             "game_description": "Find out what your type is with all your friends judging.",
             "game_creator": "Ethan Gruening"
         },
         {
-            "image_filepath": "./images/storytime.png",
-            "html_filepath": "./games/storytime.html",
+            "image_filepath": "/PajamaJams/images/storytime.png",
+            "html_filepath": "/PajamaJams/games/storytime.html",
             "game_name": "Storytime",
             "game_description": "Tell your most secretive stories with everyone listening.",
             "game_creator": "Isaac Denning"
